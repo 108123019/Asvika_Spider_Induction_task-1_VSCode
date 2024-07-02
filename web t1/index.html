@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Recipe finder</title>
+</head>
+<body>
+    <header>
+        <div class="main"> 
+            <img src="search icon.png" id="icon" alt="search">
+            <h1>Recipe finder </h1>
+            <button class='btn' onclick="window.location.href='index.html'">Home</button>
+        </div>
+        
+    </header>
+   
+    <div class="container">
+        <marquee class="move">LETS GO!!..LETS GO!!..LETS GO!!..LETS GO!!..LETS GO!!..LETS GO!!..LETS GO!!</marquee>
+         <div class="search"></div>
+             <h3>These are list of ingredients. Pick one!!</h3>
+            <input id="searchbar" type="text" placeholder="select" autofocus/>
+            <button class="btn"> SEARCH</button>
+            <div id="item">
+                <a href="#paneer" target="_self" class="paneer" onclick="toShow(this.getAttribute('class'))" id="ingredient">Paneer</a>
+                <a href="#mushroom" target="_self" class="mushroom" onclick="toShow(this.getAttribute('class'))" id="ingredient">Mushroom</a>
+                <a href="#cauliflower" target="_self" class="cauliflower" onclick="toShow(this.getAttribute('class'))"   id="ingredient">Cauliflower</a>
+                <a href="#potato" target="_self" class="potato" onclick="toShow(this.getAttribute('class'))"   id="ingredient">Potato</a>
+                <a href="#babycorn" target="_self" class="babycorn" onclick="toShow(this.getAttribute('class'))"   id="ingredient">Babycorn</a>
+                <a href="#egg" target="_self" class="egg" onclick="toShow(this.getAttribute('class'))"  id="ingredient">Egg</a>
+                <a href="#sweetcorn" target="_self" class="sweetcorn" onclick="toShow(this.getAttribute('class'))"  id="ingredient">Sweetcorn</a>
+            </div>
+    </div>
+
+   <section id="secpage">
+    <div  hidden id="paneer">
+        <h3>Paneer tikka</h3>
+       <img src="paneer tikka.jpg" class="pa">
+       <button type="button" class="paneerTikka" onclick="loadDoc(this.getAttribute('class'))" >Click For Recipe</button>
+       <h3>Paneer butter masala</h3>
+       <img src="Paneer butter masala.jpg" class="pa">
+       <button type="button" class="paneerButterMasala" onclick="loadDoc(this.getAttribute('class'))" >Click For Recipe</button>
+       <h3>palak paneer</h3>
+       <img src="Palak paneer.jfif" class="pa">
+       <button type="button" class="palakPaneer" onclick="loadDoc(this.getAttribute('class'))" >Click For Recipe</button>
+       <p id="details"></p>
+   </div>
+   
+   <div  hidden id="cauliflower">
+       <h4>Gobi 65</h4>
+       <img src="gobi65.jpg" class="ca">
+       <button type="button" class="gobi65" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Gobi Parata</h4>
+       <img src="gobiParata.jpg" class="ca">
+       <button type="button" class="gobiParata" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Gobi Manchurian</h4>
+       <img src="gobi-manchurian.jpg" class="ca">
+       <button type="button" class="gobiManchurian" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <p id="details"></p>
+    </div>
+
+   <div  hidden id="mushroom">
+       <h4>Methi mushroom</h4>
+       <img src="methi mushroom.webp" id="methi" class="mu">
+       <button type="button" class="methiMushroom" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Mushroom Masala</h4>
+       <img src="musroomMasala.jpg" class="mu">
+       <button type="button" class="mushroomMasala" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Mushroom Biryani</h4>
+       <img src="mushroomBiryani.jpg" class="mu">
+       <button type="button" class="mushroomBiryani" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <p id="details"></p>
+    </div>
+
+    <div  hidden id="potato">
+        <h4>Aloo tikka</h4>
+        <img src="alooTikka.jpg" class="po">
+        <button type="button" class="alooTikka" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+        <h4>French fries</h4>
+        <img src="frenchFries.webp" class="po" id="frenchFries">
+        <button type="button" class="frenchFries" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+        <h4>Dahi Aloo </h4>
+        <img src="dahi_aloo.jpg" class="po">
+        <button type="button" class="dahiAloo" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+        <p id="details"></p>
+     </div>
+
+   <div  hidden id="egg">
+       <h4>Egg Masala Gravy</h4>
+       <img src="eggMasalaGravy.jpg" class="eg">
+       <button type="button" class="eggMasalaGravy" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Egg Omelette</h4>
+       <img src="eggOmelete.jpg" class="eg">
+       <button type="button" class="eggOmelette" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Egg Bhurji</h4>
+       <img src="eggBhurji.jpg" class="eg">
+       <button type="button" class="eggBhurji" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <p id="details"></p>
+    </div>
+
+   <div  hidden id="babycorn">
+       <h4>Babycorn Fry</h4>
+       <img src="babycornFry.webp" class="ba">
+       <button type="button" class="babycornFry" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Babycorn Chilli</h4>
+       <img src="baby-corn-chilli.jpg" class="ba">
+       <button type="button" class="babycornChilli" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Babycorn Manchurian</h4>
+       <img src="Baby-Corn-Manchurian.jpg" class="ba">
+       <button type="button" class="babycornManchurian" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <p id="details"></p>
+    </div>
+
+   <div  hidden id="sweetcorn">
+       <h4>Corn Cutlet</h4>
+       <img src="cornCutlet.jpg" class="sw">
+       <button type="button" class="cornCutlet" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Butter Sweetcorn</h4>
+       <img src="butterSweetcorn.webp" class="sw">
+       <button type="button" class="butterSweetcorn" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <h4>Crispy Corn</h4>
+       <img src="crispy-corn-.jpg" class="sw">
+       <button type="button" class="crispyCorn" onclick="loadDoc(this.getAttribute('class'))">Click For Recipe</button>
+       <p id="details"></p>
+    </div>
+   </section>
+    
+</body>

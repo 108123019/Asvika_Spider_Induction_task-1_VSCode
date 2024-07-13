@@ -38,9 +38,17 @@ h1{
     height: 300px;
     width: 230px;
 }
+
 #frenchFries{
     height: 300px;
     width:300px;
+}
+
+button[type=button]{
+    cursor: pointer;
+    padding: 5px 10px; 
+    border-radius: 4px;
+    font-weight: 550;
 }
 
 @media screen and (min-width:768px){

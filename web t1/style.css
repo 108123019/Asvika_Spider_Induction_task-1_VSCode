@@ -21,20 +21,17 @@ h1{
 .btn{
     cursor: pointer;
     padding: 5px 10px;
-    background-color: rgb(65, 198, 198);
+    background-color: rgb(183, 17, 195);
     border-radius: 4px;
-}
-
-.a{
-   justify-content: space-around;
-   padding: 100px;
 }
 
 #item{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     flex-wrap: wrap;
+    font-size: 25px;
+    row-gap: 20px;
 }
 
 .pa, .ca ,#methi,.po, .ba, .eg, .sw{
@@ -45,5 +42,64 @@ h1{
     height: 300px;
     width:300px;
 }
+
+@media screen and (min-width:768px){
+    .move{
+        font-size: 25px;  
+    }
+
+    .note{
+        font-size: 35px;  
+        padding-left: 75px;
+    }
+
+    .main{
+        display: flex;
+        padding: 25px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 35px; 
+    }
+
+    #icon{
+        height: 60px;
+    }
+
+    .btn{
+        cursor: pointer;
+        padding: 12px 27px;
+        background-color: rgb(183, 17, 195);
+        border-radius: 12px;
+        font-size: 25px; 
+    }
+
+    #item{
+        display: flex;
+        flex-direction: column ;
+        padding-left: 100px;
+        flex-wrap: wrap;
+        font-size: 25px;
+        row-gap: 20px;
+    }
+
+    #ingredient{
+        font-size: 30px; 
+    }
+
+    .head3{
+        font-size: 45px;
+    }
+
+    .pa, .ca ,.mu ,.po, .ba, .eg, .sw{
+        height: 350px;
+        width: auto;
+    }
+
+    #details{
+        font-size: 25px; 
+    }
+}
+
+
 
 

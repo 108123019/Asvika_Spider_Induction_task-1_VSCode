@@ -19,13 +19,19 @@ document.querySelector("div.container").setAttribute("hidden",true);
 //}
 
 function loadDoc(className) {
+  var dic={"gobi65":"g","methiMushroom":"m","paneerTikka":"p","paneerButterMasala":"p",
+    "palakPaneer":"p","gobiParata":"g","gobiManchurian":"g","mushroomMasala":"m",
+    "mushroomBiryani":"m","alooTikka":"po","frenchFries":"po","dahiAloo":"po",
+    "eggMasalaGravy":"e","eggOmelette":"e","eggBhurji":"e","babycornFry":"b",
+    "babycornChilli":"b","babycornManchurian":"b","cornCutlet":"s",
+    "butterSweetcorn":"s","crispyCorn":"s"};
   const recipeFile = className + "Recipe.txt";
 
   fetch(recipeFile)
     .then(response => response.text()) // Parse response as text
     .then(data => {
-      document.getElementById("details").innerHTML = data;
-      document.getElementById("details").scrollIntoView(); 
+      document.getElementById(dic[className]).innerHTML = data;
+      document.getElementById("dic[className]").scrollIntoView(); 
     })
     .catch(error => {
       console.error("Error loading recipe:", error);
